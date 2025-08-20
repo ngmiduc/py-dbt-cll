@@ -1,0 +1,128 @@
+{
+  "metadata": {},
+  "nodes": {
+    "model.vub.bds_gen__datespine": {
+      "database": "master",
+      "schema": "bds",
+      "name": "bds_gen__datespine",
+      "resource_type": "model",
+      "alias": "bds_gen__datespine",
+      "tags": ["bds"],
+      "columns": {
+        "date_day": {
+          "name": "date_day",
+          "description": "Date in YYYY-MM-DD format",
+          "meta": {},
+          "data_type": "NVARCHAR(max)",
+          "constraints": [],
+          "quote": null,
+          "tags": []
+        }
+      }
+    },
+    "model.vub.stg_student_mgt__term": {
+      "database": "master",
+      "schema": "stg_student_mgt",
+      "name": "stg_student_mgt__term",
+      "resource_type": "model",
+      "alias": "stg_student_mgt__term",
+      "columns": {
+        "term_sid": {
+          "name": "term_sid",
+          "meta": {},
+          "data_type": "varchar",
+          "constraints": [],
+          "quote": null,
+          "tags": []
+        },
+        "academic_career_id": {
+          "name": "academic_career_id",
+          "description": "ID of an academic career.",
+          "meta": {},
+          "data_type": "varchar",
+          "constraints": [],
+          "quote": null,
+          "tags": []
+        },
+        "academic_year_id": {
+          "name": "academic_year_id",
+          "meta": {},
+          "data_type": "varchar",
+          "constraints": [],
+          "quote": null,
+          "tags": []
+        },
+        "description_eng": {
+          "name": "description_eng",
+          "meta": {},
+          "data_type": "varchar",
+          "constraints": [],
+          "quote": null,
+          "tags": []
+        },
+        "academic_year_start": {
+          "name": "academic_year_start",
+          "meta": {},
+          "data_type": "date",
+          "constraints": [],
+          "quote": null,
+          "tags": []
+        },
+        "academic_year_end": {
+          "name": "academic_year_end",
+          "meta": {},
+          "data_type": "date",
+          "constraints": [],
+          "quote": null,
+          "tags": []
+        },
+        "_imported_at": {
+          "name": "_imported_at",
+          "meta": {},
+          "data_type": "date",
+          "constraints": [],
+          "quote": null,
+          "tags": []
+        },
+        "_imported_by_run_id": {
+          "name": "_imported_by_run_id",
+          "meta": {},
+          "data_type": "varchar",
+          "constraints": [],
+          "quote": null,
+          "tags": []
+        },
+        "_valid_from": {
+          "name": "_valid_from",
+          "meta": {},
+          "data_type": "datetime2",
+          "constraints": [],
+          "quote": null,
+          "tags": []
+        },
+        "_valid_to": {
+          "name": "_valid_to",
+          "meta": {},
+          "data_type": "datetime2",
+          "constraints": [],
+          "quote": null,
+          "tags": []
+        },
+        "_is_current": {
+          "name": "_is_current",
+          "meta": {},
+          "data_type": "bit",
+          "constraints": [],
+          "quote": null,
+          "tags": []
+        }
+      }
+    }
+  },
+  "sources": {},
+  "macros": {},
+  "group_map": {},
+  "saved_queries": {},
+  "semantic_models": {},
+  "unit_tests": {}
+}
