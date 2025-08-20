@@ -2,17 +2,17 @@ import json
 
 import pytest
 
-from py_dbt_cll.dbt_lineage import extract_cll, extract_manifest
+from py_dbt_cll.dbt_lineage import DbtCLL
 
 
 @pytest.fixture
-def manifest_ressources():
+def ccl():
     with open("tests/manifest.json", "r", encoding="utf-8") as file:
         manifest_data = json.load(file)
-    return extract_manifest(manifest_data)
+    return DbtCLL(manifest_data)
 
 
-def test_extract_cll_basic(manifest_ressources):
+def test_extract_cll_basic(ccl):
     sql = """
         with
             cte_source__datespine as (select * from "master"."bds"."bds_gen__datespine"),
@@ -65,7 +65,7 @@ def test_extract_cll_basic(manifest_ressources):
         ) as final
     """
     columns = ["academic_year_id", "date_id"]
-    lineage = extract_cll(sql, columns, manifest=manifest_ressources, debug=False)
+    lineage = ccl.extract_cll(sql, columns, debug=False)
     assert lineage is not None
     assert "academic_year_id" in lineage
     assert "date_id" in lineage
