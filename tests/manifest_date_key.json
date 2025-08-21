@@ -1,0 +1,47 @@
+{
+  "metadata": {},
+  "nodes": {
+    "model.vub.bds_gen__datespine": {
+      "database": "master",
+      "schema": "bds",
+      "name": "bds_gen__datespine",
+      "resource_type": "model",
+      "alias": "bds_gen__datespine",
+      "tags": ["bds"],
+      "columns": {
+        "date_key": {
+          "name": "date_key",
+          "description": "Date in YYYY-MM-DD format",
+          "meta": {},
+          "data_type": "NVARCHAR(max)",
+          "constraints": [],
+          "quote": null,
+          "tags": []
+        }
+      }
+    },
+    "model.vub.stg_student_mgt__term": {
+      "database": "master",
+      "schema": "stg_student_mgt",
+      "name": "stg_student_mgt__term",
+      "resource_type": "model",
+      "alias": "stg_student_mgt__term",
+      "columns": {
+        "date_key": {
+          "name": "date_key",
+          "meta": {},
+          "data_type": "varchar",
+          "constraints": [],
+          "quote": null,
+          "tags": []
+        }
+      }
+    }
+  },
+  "sources": {},
+  "macros": {},
+  "group_map": {},
+  "saved_queries": {},
+  "semantic_models": {},
+  "unit_tests": {}
+}
