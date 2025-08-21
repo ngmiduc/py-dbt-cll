@@ -12,13 +12,13 @@ pip install py-dbt-cll
 
 ### Usage
 
-Import the module.
+Import the class from the module.
 
 ```bash
 from py_dbt_cll.dbt_lineage import DbtCLL
 ```
 
-Load your manifest file
+Load your manifest file from the json file and create the class instance with it. After that you can use the method `extract_cll` to extract column lineage information from your SQL queries.
 
 ```py
 with open("tests/manifest.json", "r", encoding="utf-8") as file:
@@ -35,3 +35,14 @@ sql = """
 columns = ["academic_year_id", "date_id"]
 lineage = ccl.extract_cll(sql, columns, debug=False)
 ```
+
+Parameters:
+
+- `sql` (str): The SQL query from which to extract column lineage.
+- `columns` (list): A list of column names to extract lineage for.
+- `debug` (bool): Whether to enable debug mode for more verbose output. (default is False)
+- `dialect` (str): The SQL dialect to use for parsing the SQL query (default is "tsql").
+
+Returns:
+
+- dict: A dictionary mapping column names to their lineage information.
