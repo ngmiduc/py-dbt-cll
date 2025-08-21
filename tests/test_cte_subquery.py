@@ -59,10 +59,7 @@ def test_extract_cll_basic(ccl):
                 from cte_joined
             )
         select *
-        from (
-            select *
-            from cte_final
-        ) as final
+        from cte_final
     """
     columns = ["academic_year_id", "date_id"]
     lineage = ccl.extract_cll(sql, columns, debug=False)
