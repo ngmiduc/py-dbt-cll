@@ -1,6 +1,6 @@
 [project]
 name = "py-dbt-cll"
-version = "0.1.2"
+version = "0.1.3"
 description = "python package to extract CLL from dbt files"
 authors = [
     {name = "hi@pinkbeton.com"}
