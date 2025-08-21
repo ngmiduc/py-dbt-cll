@@ -1,5 +1,7 @@
 ### py-dbt-cll
 
+![PyPI version](https://img.shields.io/pypi/v/py-dbt-cll.svg)&nbsp;![GitHub tag (latest SemVer)](https://img.shields.io/github/v/tag/ngmiduc/py-dbt-cll?label=version)&nbsp;![Publish](https://github.com/ngmiduc/py-dbt-cll/actions/workflows/publish.yml/badge.svg)&nbsp;![Tests](https://github.com/ngmiduc/py-dbt-cll/actions/workflows/test.yml/badge.svg)
+
 Python packages that extracts column lineage information from dbt models based on their metadata in the manifest file. It does not require any connection to the database and it only uses sqlGlot to extract the column level lineage information from a SQL query. Before the query is passed into sqlGlot, the query is modified with additional information from the manifest file, so that the column lineage can be accurately determined.
 
 ### Installation
