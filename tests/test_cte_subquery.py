@@ -12,7 +12,7 @@ def ccl():
     return DbtCLL(manifest_data)
 
 
-def test_extract_cll_basic(ccl):
+def test_cte_subquery(ccl):
     sql = """
         with
             cte_source__datespine as (select * from "master"."bds"."bds_gen__datespine"),
